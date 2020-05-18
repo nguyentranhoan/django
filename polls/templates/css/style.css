@@ -1,0 +1,42 @@
+h1{
+    color:yellow;
+}
+body{
+    color: red;
+    background: coral;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6em;
+}
+p{
+    color: blue;
+}
+
+
+.container{
+    width:80%;
+    margin: auto;
+}
+
+.box-1{
+    background-color: black;
+    color: white;
+    border-right: 5px white solid;
+    border-left: 5px white solid;
+    border-top: 5px white solid;
+    border-bottom: 5px white solid;
+
+    border: 5px white solid;
+    border-width:3px;
+    border-style:dotted;
+
+    padding: 20px;
+}
+
+.box-1 h1{
+   font-family: Tahoma;
+   font-weight:800;
+   font-style: italic;
+   text-decoration:underline;
+}
