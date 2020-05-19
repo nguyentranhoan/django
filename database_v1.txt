@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS authentication (
     id         serial not null primary key,
-    uuid       uuid                     default uuid_generate_v4(),
+    uuid       uuid default uuid_generate_v4(),
     username  varchar(255) unique,
     email      varchar(255) unique,
     password   varchar(255),
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS categories (
 
 
 
-CREATE TABLE IF NOT EXISTS sub_cat (
+CREATE TABLE IF NOT EXISTS sub_categories (
   id SERIAL NOT NULL PRIMARY KEY,
   uuid uuid default uuid_generate_v4(),
   name varchar(50) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS topics (
 
 
 
-CREATE TABLE IF NOT EXISTS followed_topic (
+CREATE TABLE IF NOT EXISTS subscribers (
   id SERIAL NOT NULL PRIMARY KEY,
   uuid uuid default uuid_generate_v4(),
   user_id int NOT NULL REFERENCES users(id),
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS comments (
 );
 
 
-CREATE TABLE IF NOT EXISTS pageviews (
+CREATE TABLE IF NOT EXISTS topic_statistic (
   id SERIAL NOT NULL PRIMARY KEY,
   uuid uuid default uuid_generate_v4(),
   topic_id int NOT NULL REFERENCES topics(id),
