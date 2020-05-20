@@ -93,9 +93,8 @@ CREATE TABLE IF NOT EXISTS topic_statistic (
   id SERIAL NOT NULL PRIMARY KEY,
   uuid uuid default uuid_generate_v4(),
   topic_id int NOT NULL REFERENCES topics(id),
-  views int NOT NULL,
+  views int NOT NULL DEFAULT=0,
+  likes int NOT NULL DEFAULT=0,
   created_at   timestamp with time zone default CURRENT_TIMESTAMP,
   updated_at   timestamp
 );
-
-
